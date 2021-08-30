@@ -38,18 +38,23 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .wrapper {
   display:grid;
   grid-template-areas: 
-  "header header header"
-  "sidebar content content";
+  "header header"
+  "sidebar content";
   margin: 0 auto;
   max-width: 1440px;
 }
 
 .header{
+background-color: aquamarine;
 grid-area: header;
 }
 
+.header img {
+	width:20px;
+}
 .sidebar{
-  grid-area: sidebar;
+	background-color: beige;
+	grid-area: sidebar;
 }
 
 .content{
