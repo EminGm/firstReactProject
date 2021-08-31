@@ -1,8 +1,10 @@
 import React from "react";
+import style from "./sidebar.module.css";
+
 
 const Sidebar =()=>{
   return(
-<section className = "sidebar">
+<section className = {style.sidebar}>
         <ul>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Messages</a></li>

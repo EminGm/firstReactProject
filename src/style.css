@@ -44,19 +44,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   max-width: 1440px;
 }
 
-.header{
-background-color: aquamarine;
-grid-area: header;
-}
 
-.header img {
-	width:20px;
-}
-.sidebar{
-	background-color: beige;
-	grid-area: sidebar;
-}
 
-.content{
-  grid-area: content;
-}
+
