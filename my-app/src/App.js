@@ -3,7 +3,7 @@ import "./style.css";
 import Header from "./components/header/header.jsx"
 import Sidebar from "./components/sidebar/sidebar.jsx"
 import Profile from "./components/profile/profile.jsx"
-import Posts from "./components/profile/posts/posts.jsx"
+
 
 export default function App() {
   return (
@@ -12,7 +12,6 @@ export default function App() {
       <Header />
       <Sidebar />
       <Profile />
-      <Posts />
     </div>
   );
 }
