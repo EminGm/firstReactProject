@@ -5,7 +5,7 @@ import style from "./settings.module.css";
 const Settings = () => {
   return (
     <section className={style.clothing}>
-      <div>Clothing</div>
+      <div>Settings</div>
     </section>);
 }
 

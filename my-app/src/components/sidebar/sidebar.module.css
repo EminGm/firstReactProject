@@ -1,5 +1,13 @@
 
 .sidebar{
+	
+	padding:25px;
 	background-color: beige;
 	grid-area: sidebar;
+}
+
+
+
+.sidebar a:active {
+	color:green;
 }
