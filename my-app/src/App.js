@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Clothing from "./components/content/clothing/clothing.jsx";
+import Messages from "./components/content/messages/messages.jsx";
 import style from "./components/content/content.module.css";
 import Profile from "./components/content/profile/profile.jsx";
 import Header from "./components/header/header.jsx";
@@ -19,7 +19,7 @@ export default function App() {
         <Sidebar />
         <div className={style.content}>
           <Route path="/profile" component={Profile} />
-          <Route path="/clothing" component={Clothing} />
+          <Route path="/messages" component={Messages} />
           <Route path="/music" component={Music} />
           <Route path="/news" component={News} />
           <Route path="/settings" component={Settings} />

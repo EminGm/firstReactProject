@@ -1,0 +1,17 @@
+
+.messages{
+  display:grid;
+  grid-template-columns: 2fr 10fr;
+  color:blue;
+  padding:25px;
+}
+
+.dialogs{};
+
+.dialog{
+  padding:25px;
+};
+
+.chats{};
+
+.chat{};
