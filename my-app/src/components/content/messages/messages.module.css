@@ -8,8 +8,8 @@
 
 .dialogs{};
 
-.dialog{
-  padding:25px;
+.dialog a {
+  color:brown;
 };
 
 .chats{};
