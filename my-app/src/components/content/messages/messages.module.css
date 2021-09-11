@@ -4,13 +4,12 @@
   grid-template-columns: 2fr 10fr;
   color:blue;
   padding:25px;
+  background-color: brown;
 }
 
 .dialogs{};
 
-.dialog a {
-  color:brown;
-};
+
 
 .chats{};
 
