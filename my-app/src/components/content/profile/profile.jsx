@@ -9,14 +9,16 @@ let postsData = [
   { id: "3", message: "Go go go", likesCount: 41 }
 ];
 
+let postsArray = postsData.map((p) => {
+  return <Posts message={p.message} likesCount={p.likesCount} />
+})
+
 const Profile = () => {
   return (
     <section className={style.content}>
       <Profileinfo />
       <div className="myPosts">My Posts</div>
-      <Posts message={postsData[0].message} />
-      <Posts message={postsData[1].message} />
-      <Posts message={postsData[2].message} />
+      {postsArray}
     </section>);
 }
 
