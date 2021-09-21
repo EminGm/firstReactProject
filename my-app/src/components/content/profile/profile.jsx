@@ -3,17 +3,20 @@ import style from "./profile.module.css";
 import Posts from "./posts/posts.jsx"
 import Profileinfo from "./profileinfo/profileinfo";
 
-let postsData = [
+/*let postsData = [
   { id: "1", message: "Hi there", likesCount: 1 },
   { id: "2", message: "How r U", likesCount: 4 },
   { id: "3", message: "Go go go", likesCount: 41 }
 ];
+*/
 
-let postsArray = postsData.map((p) => {
-  return <Posts message={p.message} likesCount={p.likesCount} />
-})
 
-const Profile = () => {
+const Profile = (props) => {
+
+  let postsArray = props.postsData.map((p) => {
+    return <Posts message={p.message} likesCount={p.likesCount} />
+  })
+
   return (
     <section className={style.content}>
       <Profileinfo />
@@ -21,5 +24,7 @@ const Profile = () => {
       {postsArray}
     </section>);
 }
+
+
 
 export default Profile;

@@ -18,4 +18,10 @@ let chatsdata = [
     { id: "4", message: "Nice day" },
 ]
 
-ReactDOM.render(<App dialogsdata={dialogsdata} chatsdata={chatsdata} />, document.getElementById("root"));
+let postsData = [
+    { id: "1", message: "Hi there", likesCount: 1 },
+    { id: "2", message: "How r U", likesCount: 4 },
+    { id: "3", message: "Go go go", likesCount: 41 }
+];
+
+ReactDOM.render(<App dialogsdata={dialogsdata} chatsdata={chatsdata} postsData={postsData} />, document.getElementById("root"));

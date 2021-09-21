@@ -23,7 +23,7 @@ export default function App(props) {
         <Header />
         <Sidebar />
         <div className={style.content}>
-          <Route path="/profile" render={Profile} />
+          <Route path="/profile" render={() => <Profile postsData={props.postsData} />} />
           <Route path="/messages" render={() => <Messages dialogsdata={props.dialogsdata} chatsdata={props.chatsdata} />} />
           <Route path="/music" render={Music} />
           <Route path="/news" render={News} />
