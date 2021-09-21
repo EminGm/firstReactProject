@@ -11,18 +11,23 @@ import News from "./components/content/news/news.jsx";
 import Settings from "./components/content/settings/settings.jsx";
 
 
-export default function App() {
+export default function App(props) {
+
+
+
   return (
+
     <BrowserRouter>
       <div className="wrapper">
+
         <Header />
         <Sidebar />
         <div className={style.content}>
-          <Route path="/profile" component={Profile} />
-          <Route path="/messages" component={Messages} />
-          <Route path="/music" component={Music} />
-          <Route path="/news" component={News} />
-          <Route path="/settings" component={Settings} />
+          <Route path="/profile" render={Profile} />
+          <Route path="/messages" render={() => <Messages dialogsdata={props.dialogsdata} chatsdata={props.chatsdata} />} />
+          <Route path="/music" render={Music} />
+          <Route path="/news" render={News} />
+          <Route path="/settings" render={Settings} />
         </div>
       </div>
     </BrowserRouter>
