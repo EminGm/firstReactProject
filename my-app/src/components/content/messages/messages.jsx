@@ -7,12 +7,14 @@ import Chat from "./Chat/chat";
 
 const Messages = (props) => {
 
-  let dialogsArray = props.dialogsdata.map((d) => {
+
+
+  let dialogsArray = props.state.dialogsdata.map((d) => {
     return <Dialogs id={d.id} name={d.name} />
   });
 
 
-  let chatsArray = props.chatsdata.map((c) => {
+  let chatsArray = props.state.chatsdata.map((c) => {
     return <Chat id={c.id} message={c.message} />
   })
 

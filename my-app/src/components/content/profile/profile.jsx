@@ -6,7 +6,7 @@ import Profileinfo from "./profileinfo/profileinfo";
 
 const Profile = (props) => {
 
-  let postsArray = props.postsData.map((p) => {
+  let postsArray = props.state.postsData.map((p) => {
     return <Posts message={p.message} likesCount={p.likesCount} />
   })
 

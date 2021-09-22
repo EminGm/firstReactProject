@@ -14,7 +14,6 @@ import Settings from "./components/content/settings/settings.jsx";
 export default function App(props) {
 
 
-
   return (
 
     <BrowserRouter>
@@ -23,8 +22,8 @@ export default function App(props) {
         <Header />
         <Sidebar />
         <div className={style.content}>
-          <Route path="/profile" render={() => <Profile postsData={props.postsData} />} />
-          <Route path="/messages" render={() => <Messages dialogsdata={props.dialogsdata} chatsdata={props.chatsdata} />} />
+          <Route path="/profile" render={() => <Profile state={props.state.profilePage} />} />
+          <Route path="/messages" render={() => <Messages state={props.state.messagesPage} />} />
           <Route path="/music" render={Music} />
           <Route path="/news" render={News} />
           <Route path="/settings" render={Settings} />
