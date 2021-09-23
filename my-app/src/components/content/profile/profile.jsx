@@ -10,10 +10,26 @@ const Profile = (props) => {
     return <Posts message={p.message} likesCount={p.likesCount} />
   })
 
+  let textElement = React.createRef();
+
+  let postButton = () => {
+    let postButtonText = textElement.current.value;
+    console.log(postButtonText);
+  }
+
   return (
     <section className={style.content}>
       <Profileinfo />
       <div className="myPosts">My Posts</div>
+      <div>
+        <div>
+          <textarea ref={textElement}></textarea>
+        </div>
+        <div>
+          <button onClick={postButton}>Add Post</button>
+        </div>
+
+      </div>
       {postsArray}
     </section>);
 }

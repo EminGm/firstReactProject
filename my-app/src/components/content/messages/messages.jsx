@@ -18,6 +18,12 @@ const Messages = (props) => {
     return <Chat id={c.id} message={c.message} />
   })
 
+  let text = React.createRef();
+
+  let send = () => {
+    console.log(text.current.value)
+  };
+
   return (
     <section className={style.messages}>
       <div className={style.dialogs}>
@@ -25,6 +31,14 @@ const Messages = (props) => {
       </div>
       <div className={style.chats}>
         {chatsArray}
+      </div>
+      <div>
+        <div>
+          <textarea ref={text}></textarea>
+        </div>
+        <div>
+          <button onClick={send}>Send</button>
+        </div>
       </div>
     </section>);
 }
