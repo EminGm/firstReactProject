@@ -13,29 +13,27 @@ import { addMessage } from "./components/state/state.js";
 
 export default function App(props) {
   return (
-    <BrowserRouter>
-      <div className="wrapper">
-        <Header />
-        <Sidebar />
-        <div className={style.content}>
-          <Route
-            path="/profile"
-            render={() => (
-              <Profile
-                state={props.state.profilePage}
-                addMessage={props.addMessage}
-              />
-            )}
-          />
-          <Route
-            path="/messages"
-            render={() => <Messages state={props.state.messagesPage} />}
-          />
-          <Route path="/music" render={Music} />
-          <Route path="/news" render={News} />
-          <Route path="/settings" render={Settings} />
-        </div>
+    <div className="wrapper">
+      <Header />
+      <Sidebar />
+      <div className={style.content}>
+        <Route
+          path="/profile"
+          render={() => (
+            <Profile
+              state={props.state.profilePage}
+              addMessage={props.addMessage}
+            />
+          )}
+        />
+        <Route
+          path="/messages"
+          render={() => <Messages state={props.state.messagesPage} />}
+        />
+        <Route path="/music" render={Music} />
+        <Route path="/news" render={News} />
+        <Route path="/settings" render={Settings} />
       </div>
-    </BrowserRouter>
+    </div>
   );
 }

@@ -12,7 +12,8 @@ const Profile = (props) => {
 
   let postButton = () => {
     let postButtonText = textElement.current.value;
-    console.log(postButtonText);
+    props.addMessage(postButtonText);
+    textElement.current.value = "";
   };
 
   return (
