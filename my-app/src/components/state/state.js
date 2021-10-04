@@ -23,6 +23,7 @@ let state = {
       { id: "2", message: "How r U", likesCount: 4 },
       { id: "3", message: "Go go go", likesCount: 41 },
     ],
+    newText: "",
   },
 };
 
@@ -33,6 +34,11 @@ export let addMessage = (addpost) => {
     likesCount: 0,
   };
   state.profilePage.postsData.push(newPost);
+  rerenderEntireTree(state);
+};
+
+export let updatePost = (newText) => {
+  state.profilePage.newText = newText;
   rerenderEntireTree(state);
 };
 

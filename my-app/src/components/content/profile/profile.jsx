@@ -16,13 +16,23 @@ const Profile = (props) => {
     textElement.current.value = "";
   };
 
+  let updateText = () => {
+    let newText = textElement.current.value;
+    props.updatePost(newText);
+    textElement.current.value = "";
+  };
+
   return (
     <section className={style.content}>
       <Profileinfo />
       <div className="myPosts">My Posts</div>
       <div>
         <div>
-          <textarea ref={textElement}></textarea>
+          <textarea
+            onChange={updateText}
+            ref={textElement}
+            value={props.state.newText}
+          ></textarea>
         </div>
         <div>
           <button onClick={postButton}>Add Post</button>
