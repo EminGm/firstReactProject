@@ -11,9 +11,7 @@ const Profile = (props) => {
   let textElement = React.createRef();
 
   let postButton = () => {
-    let postButtonText = textElement.current.value;
-    props.addMessage(postButtonText);
-    textElement.current.value = "";
+    props.addMessage(props.state.newText);
   };
 
   let updateText = () => {

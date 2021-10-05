@@ -27,14 +27,15 @@ let state = {
   },
 };
 
-export let addMessage = (addpost) => {
+export let addMessage = () => {
   let newPost = {
     id: "4",
-    message: addpost,
+    message: state.profilePage.newText,
     likesCount: 0,
   };
   state.profilePage.postsData.push(newPost);
   rerenderEntireTree(state);
+  state.profilePage.newText = "";
 };
 
 export let updatePost = (newText) => {
